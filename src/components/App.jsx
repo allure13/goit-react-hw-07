@@ -13,6 +13,7 @@ import ErrorMessage from './ErrorMessage/ErrorMessage';
 import { useEffect } from 'react';
 import { fetchContacts } from '../redux/contactsOps';
 import Notification from './Notification/Notification';
+import Title from './Title/Title';
 
 export default function App() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ export default function App() {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <Title />
       <ContactForm />
       <SearchBar />
       {contacts.length > 0 ? <ContactList /> : <Notification />}
